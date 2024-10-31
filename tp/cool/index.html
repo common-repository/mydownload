@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>下载中心插件</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<?php require_once $_SERVER['DOCUMENT_ROOT'].'wp-config.php';?>
+        <link rel="shortcut icon" href="favicon.png" />
+        <link rel="stylesheet" type="text/css" href="css/clear.css" />
+        <link rel="stylesheet" type="text/css" href="css/site.css" />
+		<link href="css/facebox.css" rel="stylesheet" type="text/css" />
+		<link href="css/fonts/stylesheet.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.useso.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.useso.com/css?family=Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+		
+	    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.myHint.js"></script>
+        <script type="text/javascript" src="js/jquery.facebox.js"></script>
+        <script type="text/javascript" src="js/customUI.js"></script>			
+        <script type="text/javascript" src="js/ajax.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+		<!--[if lt IE 10]>
+			<script type="text/javascript" src="js/PIE.js"></script>
+		<![endif]-->
+    </head>
+    <body>
+
+    <?php if( have_posts() ){ the_post();?>   
+<!--文章代码-->   
+
+<?php the_title(); echo "2"; ?>
+<?php } ?>  
+		<table class="doc-loader">
+            <tr>
+                <td>
+                    <img src="images/loading.gif" alt="loading..." />
+                </td>
+            </tr>
+        </table> 
+		<div class="body_wrapper">
+			<div class="sprite"></div>
+			<div id="header">
+				<img src="images/logo.png" alt="image_logo" />			
+			</div>
+			<div class="wrapper">
+				<div class="column-520 m-top-55">
+					<div class="summary" style="font-family:Microsoft YaHei,Arial,Tahoma;">
+						文件名 			
+					</div>
+					<div class="summary-small m-top-25 m-bottom-45" style="font-family:Microsoft YaHei,Arial,Tahoma;">
+						下载文件介绍				
+					</div>
+				</div>
+				<img src="images/main_image.png" class="main-image" alt="image_main" />
+				<div class="clear-left"></div>
+				<div class="buttons-contact">
+					<a href="#contact" class="button-get-in-touch rounded" rel="facebox">点击下载</a>
+					<div class="image-or"></div>
+					<a href="#subscribe" class="button-subscribe rounded" rel="facebox">返回文章</a>				
+				</div>
+				<div class="clear"></div>
+				<div class="wrapper-mid-content m-top-110">
+					
+					<div class="clear"></div>
+					<div class="subheader">
+						<div class="subheader-line m-right-30"></div>
+						<h3>下载数：</h3>
+						<div class="subheader-line m-left-30"></div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		
+		<!shared---//弹出部分-->
+		<div id="subscribe">
+            <div class="subscribe">
+				<div class="form-text m-left-100 m-top-60">Subscribe</div>
+                <img class="notification-hint" src="images/fill_the_forms.png" alt="Subscribe to be notified"/>
+				<a class="closePopup" href="javascript: ClosePopupWindow();"><img src="images/close.png" alt="Close" /></a> 
+                <input type="text" id="subscriberEmail" />
+                <a class="subscribeButton rounded" id="subscribeButton" href="javascript: subscribe();">Subscribe</a>
+				<div class="clear"></div>
+                <div class="footnote">Be the first to hear our news. No spam - We promise.</div>        
+			</div>
+        </div>
+        <div id="contact">
+            <div class="contact">
+				<div id="fox" class="form-text m-left-50" style="font-size: 40px;">文件名称</div>
+                <img class="fill-the-forms" src="images/fill_the_forms.png" alt="Fill the forms bellow"/>
+                <a class="closePopup" href="javascript: ClosePopupWindow();"><img src="images/close.png" alt="Close"/></a>
+                <ul class="user-data">
+                    <li>
+                        广告
+                    </li>
+                     <li>
+                        下载简介
+                    </li>
+                    
+                 下载：
+                     <a class="submit" id="submitButton" href="">百度网盘</a>
+                     <a class="submit" id="submitButton" href="">百度网盘</a>
+                     <a class="submit" id="submitButton" href="">百度网盘</a>
+                     <a class="submit" id="submitButton" href="">百度网盘</a>                    
+				
+                </ul>
+        	</div>
+		</div>
+	</body>
+</html>
